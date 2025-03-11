@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* Global color variables */
 :root {
   --primary-color: #9880ff;
   --secondary-color: #6e5dc6;
@@ -30,9 +31,7 @@ html {
   scroll-padding-top: 80px;
 }
 
-/* ----------------------------------------------
-   Animated Dark Gradient Background
----------------------------------------------- */
+/* Background animation for the gradient effect */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
