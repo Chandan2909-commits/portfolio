@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chandan | Portfolio</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Chandan - Front-end Developer specializing in modern web experiences, AI, and ML technologies">
+    <meta name="keywords" content="frontend developer, web developer, AI, ML, portfolio, Chandan">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/source-code.png">
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome (optional) -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -16,266 +21,594 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body id="top">
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="logo-container">
+        <div class="logo-animation">
+          <span class="bracket left">&lt;</span>
+          <span class="slash">/</span>
+          <span class="bracket right">&gt;</span>
+        </div>
+        <p class="loading-text">Loading<span class="dot-animation"></span></p>
+      </div>
+    </div>
+    
     <!-- Navbar -->
     <header class="navbar">
-      <a href="#project"><button class="nav-btn">PROJECTS</button></a>
-      <a href="Chandan's Resume.pdf"><button class="nav-btn">RESUME</button></a>
-      <a href="#contact"><button class="nav-btn active">SAY HI</button></a>
+      <div class="logo">
+        <span>&lt;/&gt;</span> Chandan
+      </div>
+      <nav class="nav-links">
+        <a href="#top" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#project" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#timeline" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#" class="nav-btn" id="resume-btn">Resume</a>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </header>
 
-    <!-- Profile Section -->
-    <main class="container">
-      <div class="profile">
-        <img src="my picture.jpg" alt="Chandan" id="profile-picture" />
-      </div>
-      <div class="profile-text">
-        <h1><span class="highlight">Hey!</span> I'm Chandan,</h1>
-        <h2>a Front-end Developer</h2>
-        <p>
-          who crafts interactive & modern web experiences.<br />
-          Passionate about AI, ML, and cutting-edge tech.
-        </p>
-        <div class="contact">
-          <button class="email-btn">chandan153377@gmail.com →</button>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="profile-text" data-aos="fade-right" data-aos-duration="1000">
+          <span class="greeting">Hello, I'm</span>
+          <h1><span class="highlight">Chandan</span></h1>
+          <h2>Front-end Developer</h2>
+          <p class="hero-description">
+            I craft interactive & modern web experiences with a passion for AI, ML, and cutting-edge technologies. 
+            Let's create something amazing together.
+          </p>
+          <div class="cta-buttons">
+            <a href="#project" class="primary-btn">View My Work</a>
+            <a href="#contact" class="secondary-btn">Let's Talk</a>
+          </div>
           <div class="social-icons">
-            <a href="https://www.linkedin.com/in/chandan-kumar-29014b290/?originalSubdomain=in"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Chandan2909-commits"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/chandan.29_19/profilecard/?igsh=enZzem10cm11bmJh"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/chandan-kumar-29014b290/?originalSubdomain=in" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Chandan2909-commits" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/chandan.29_19/profilecard/?igsh=enZzem10cm11bmJh" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:chandan153377@gmail.com" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="profile" data-aos="fade-left" data-aos-duration="1000">
+          <div class="profile-image-container">
+            <img src="my picture.jpg" alt="Chandan" id="profile-picture" />
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
-    <!-- Projects Section with 3D Flip Cards and Scroll Animation -->
-    <section class="projects-section" id="project">
-      <div class="projects">
-        <p id="heading">My Works</p>
-        <!-- Project Card 1 -->
-        <div class="project-card animate-on-scroll">
-          <div class="card-inner">
-            <!-- Front Side -->
-            <div class="card-front">
-              <div class="card-image-container">
-                <img src="image.png" alt="Project Preview" class="project-image" />
+    <!-- About Section (New) -->
+    <section id="about" class="about-section">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">About <span class="highlight">Me</span></h2>
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+            <p>
+              I'm a passionate Front-end Developer with a strong interest in creating modern, 
+              user-friendly web applications. My journey in tech began with a fascination for how 
+              digital experiences can transform how we interact with information.
+            </p>
+            <p>
+              My expertise lies in crafting responsive interfaces and implementing advanced features 
+              using the latest web technologies. I'm particularly drawn to AI and Machine Learning, 
+              integrating these cutting-edge technologies into practical solutions.
+            </p>
+            <p>
+              When I'm not coding, you can find me exploring new technologies, contributing to open-source 
+              projects, or sharing my knowledge with the developer community.
+            </p>
+            <div class="about-details">
+              <div class="detail-item">
+                <span class="detail-label"><i class="fas fa-envelope"></i> Email:</span>
+                <span class="detail-value">chandan153377@gmail.com</span>
               </div>
-              <div class="card-info">
-                <h3>Niti Suraksha</h3>
-                <p>An AI insurance fraud detection system</p>
-                
+              <div class="detail-item">
+                <span class="detail-label"><i class="fas fa-map-marker-alt"></i> Location:</span>
+                <span class="detail-value">India</span>
               </div>
-            </div>
-            <!-- Back Side -->
-            <div class="card-back">
-              <div class="card-back-content">
-                <h3>Niti Suraksha</h3>
-                <p>
-                  It is an AI-powered insurance fraud detection system . Leveraging advanced machine learning algorithms, it analyzes claims data to identify suspicious patterns and potential fraud. By automating fraud detection, it enhances security, reduces financial losses, and streamlines the claims verification process, ensuring a more efficient and trustworthy insurance system.
-                </p>
-                <a href="https://niti-suraksha.vercel.app/">See More →</a>
+              <div class="detail-item">
+                <span class="detail-label"><i class="fas fa-graduation-cap"></i> Education:</span>
+                <span class="detail-value">Computer Science with a specialization in Artificial Intelligence and Machine Learning</span>
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Project Card 2 -->
-        <div class="project-card animate-on-scroll">
-          <div class="card-inner">
-            <!-- Front Side -->
-            <div class="card-front">
-              <div class="card-image-container">
-                <img src="x-vision.png" alt="Project Preview" class="project-image" />
-              </div>
-              <div class="card-info">
-                <h3>X-Ray Ai</h3>
-                <p>An intelligent ai solution for medical diagnosis</p>
-              </div>
+          <div class="about-stats" data-aos="fade-left" data-aos-delay="200">
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Projects Completed</div>
             </div>
-            <!-- Back Side -->
-            <div class="card-back">
-              <div class="card-back-content">
-                <h3>X-Ray Ai</h3>
-                <p>
-                  It is an advanced AI-powered diagnostic tool that analyzes X-ray images to detect potential diseases with high accuracy. Utilizing deep learning, it provides quick and reliable assessments, assisting healthcare professionals in early detection and diagnosis. The intuitive interface ensures seamless user experience, making medical imaging analysis more efficient and accessible.
-                </p>
-                <a href="https://xray-ai-website.vercel.app/login.html">See More →</a>
-              </div>
+            <div class="stat-item">
+              <div class="stat-number">1+</div>
+              <div class="stat-label">Years Experience</div>
             </div>
-          </div>
-        </div>
-
-        <!-- Project Card 3 -->
-        <div class="project-card animate-on-scroll">
-          <div class="card-inner">
-            <!-- Front Side -->
-            <div class="card-front">
-              <div class="card-image-container">
-                <img src="stock.png" alt="Project Preview" class="project-image" />
-              </div>
-              <div class="card-info">
-                <h3>Stock Manager </h3>
-                <p>One stop solution for stock management</p>
-              </div>
-            </div>
-            <!-- Back Side -->
-            <div class="card-back">
-              <div class="card-back-content">
-                <h3>Stock Manager</h3>
-                <p>
-                  It is a dynamic web application designed to help users efficiently visualize and track their investment portfolios. It provides insightful data representations, real-time analytics, and an intuitive interface to monitor stock performance, asset allocation, and overall portfolio health. The app ensures users can make informed financial decisions with ease.
-                </p>
-                <a href="#">See More →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card 4 -->
-        <div class="project-card animate-on-scroll">
-          <div class="card-inner">
-            <!-- Front Side -->
-            <div class="card-front">
-              <div class="card-image-container">
-                <img src="detect.png" alt="Project Preview" class="project-image" />
-              </div>
-              <div class="card-info">
-                <h3>Pneumonia Detecor</h3>
-                <p>An Ai based system to detect pneumonia</p>
-              </div>
-            </div>
-            <!-- Back Side -->
-            <div class="card-back">
-              <div class="card-back-content">
-                <h3>Project Explanation</h3>
-                <p>
-                  It is an AI-driven diagnostic tool designed to detect pneumonia from chest X-ray images with high accuracy. Using deep learning, it analyzes medical scans to differentiate between normal and pneumonic cases, assisting healthcare professionals in early detection and diagnosis. This tool enhances medical decision-making by providing quick and reliable results, making pneumonia detection more accessible and efficient.
-                </p>
-                <a href="https://x-vision-ai-pneumonia-detector.streamlit.app/">See More →</a>
-              </div>
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Happy Clients</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Projects Section with 3D Flip Cards and Scroll Animation -->
+    <section class="projects-section" id="project">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">My <span class="highlight">Projects</span></h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Discover my latest work and projects</p>
+        
+        <div class="projects">
+          <!-- Project Card 1 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-inner">
+              <!-- Front Side -->
+              <div class="card-front">
+                <div class="card-image-container">
+                  <img src="image.png" alt="Niti Suraksha Project" class="project-image" />
+                </div>
+                <div class="card-info">
+                  <h3>Niti Suraksha</h3>
+                  <p>An AI insurance fraud detection system</p>
+                  <div class="tech-stack">
+                    <span class="tech-tag">AI</span>
+                    <span class="tech-tag">ML</span>
+                    <span class="tech-tag">Web</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="card-back">
+                <div class="card-back-content">
+                  <h3>Niti Suraksha</h3>
+                  <p>
+                    An AI-powered insurance fraud detection system leveraging advanced machine learning algorithms to analyze claims data and identify suspicious patterns. The system enhances security, reduces financial losses, and streamlines the claims verification process for a more efficient and trustworthy insurance system.
+                  </p>
+                  <div class="project-links">
+                    <a href="https://niti-suraksha.vercel.app/" class="project-link"><i class="fas fa-globe"></i> Live Demo</a>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-inner">
+              <!-- Front Side -->
+              <div class="card-front">
+                <div class="card-image-container">
+                  <img src="x-vision.png" alt="X-Ray AI Project" class="project-image" />
+                </div>
+                <div class="card-info">
+                  <h3>X-Ray AI</h3>
+                  <p>An intelligent AI solution for medical diagnosis</p>
+                  <div class="tech-stack">
+                    <span class="tech-tag">AI</span>
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">Healthcare</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="card-back">
+                <div class="card-back-content">
+                  <h3>X-Ray AI</h3>
+                  <p>
+                    An advanced AI-powered diagnostic tool that analyzes X-ray images to detect potential diseases with high accuracy. Utilizing deep learning, it provides quick and reliable assessments, assisting healthcare professionals in early detection and diagnosis with an intuitive interface for seamless user experience.
+                  </p>
+                  <div class="project-links">
+                    <a href="https://xray-ai-website.vercel.app/login.html" class="project-link"><i class="fas fa-globe"></i> Live Demo</a>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-inner">
+              <!-- Front Side -->
+              <div class="card-front">
+                <div class="card-image-container">
+                  <img src="stock.png" alt="Stock Manager Project" class="project-image" />
+                </div>
+                <div class="card-info">
+                  <h3>Stock Manager</h3>
+                  <p>One-stop solution for stock management</p>
+                  <div class="tech-stack">
+                    <span class="tech-tag">Finance</span>
+                    <span class="tech-tag">Data Visualization</span>
+                    <span class="tech-tag">Web App</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="card-back">
+                <div class="card-back-content">
+                  <h3>Stock Manager</h3>
+                  <p>
+                    A dynamic web application designed to help users efficiently visualize and track their investment portfolios. It provides insightful data representations, real-time analytics, and an intuitive interface to monitor stock performance, asset allocation, and overall portfolio health.
+                  </p>
+                  <div class="project-links">
+                    <a href="#" class="project-link"><i class="fas fa-globe"></i> Live Demo</a>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="card-inner">
+              <!-- Front Side -->
+              <div class="card-front">
+                <div class="card-image-container">
+                  <img src="detect.png" alt="Pneumonia Detector Project" class="project-image" />
+                </div>
+                <div class="card-info">
+                  <h3>Pneumonia Detector</h3>
+                  <p>An AI-based system to detect pneumonia</p>
+                  <div class="tech-stack">
+                    <span class="tech-tag">AI</span>
+                    <span class="tech-tag">Healthcare</span>
+                    <span class="tech-tag">Python</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="card-back">
+                <div class="card-back-content">
+                  <h3>Pneumonia Detector</h3>
+                  <p>
+                    An AI-driven diagnostic tool designed to detect pneumonia from chest X-ray images with high accuracy. Using deep learning, it analyzes medical scans to differentiate between normal and pneumonic cases, assisting healthcare professionals in early detection and diagnosis.
+                  </p>
+                  <div class="project-links">
+                    <a href="https://x-vision-ai-pneumonia-detector.streamlit.app/" class="project-link"><i class="fas fa-globe"></i> Live Demo</a>
+                    <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="view-more-container" data-aos="fade-up">
+          <a href="https://github.com/Chandan2909-commits" class="view-more-btn">
+            View More on GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills & Technologies Section -->
-    <section class="skills">
-      <div class="skills-container">
-        <h2>Skills & Technologies</h2>
-        <div class="skills-grid">
-          <div class="skill">
-            <i class="fab fa-html5"></i>
-            <p>HTML5</p>
+    <section class="skills" id="skills">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">My <span class="highlight">Skills</span></h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Technologies and tools I work with</p>
+        
+        <div class="skills-wrapper">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3>Frontend Development</h3>
+            <div class="skills-grid">
+              <div class="skill">
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+              </div>
+              <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS3</p>
+              </div>
+              <div class="skill">
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+              </div>
+              <div class="skill">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+              </div>
+              <div class="skill">
+                <i class="fab fa-bootstrap"></i>
+                <p>Bootstrap</p>
+              </div>
+              <div class="skill">
+                <i class="fab fa-sass"></i>
+                <p>Sass</p>
+              </div>
+            </div>
           </div>
-          <div class="skill">
-            <i class="fab fa-css3-alt"></i>
-            <p>CSS3</p>
+          
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <h3>Programming Languages</h3>
+            <div class="skills-grid">
+              <div class="skill">
+                <i class="devicon-cplusplus-plain"></i>
+                <p>C++</p>
+              </div>
+              <div class="skill">
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+              </div>
+              <div class="skill">
+                <i class="fab fa-java"></i>
+                <p>Java</p>
+              </div>
+            </div>
           </div>
-          <div class="skill">
-            <i class="fab fa-js"></i>
-            <p>JavaScript</p>
+          
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+            <h3>AI & Machine Learning</h3>
+            <div class="skills-grid">
+              <div class="skill">
+                <i class="fas fa-brain"></i>
+                <p>ML Algorithms</p>
+              </div>
+              <div class="skill">
+                <i class="fas fa-chart-line"></i>
+                <p>Data Analysis</p>
+              </div>
+              <div class="skill">
+                <i class="fas fa-robot"></i>
+                <p>Neural Networks</p>
+              </div>
+              <div class="skill">
+                <i class="fas fa-cogs"></i>
+                <p>TensorFlow</p>
+              </div>
+            </div>
           </div>
-          <div class="skill">
-            <i class="devicon-cplusplus-plain"></i>
-            <p>C++</p>
-          </div>
-          <div class="skill">
-            <i class="fab fa-python"></i>
-            <p>Python</p>
+          
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+            <h3>Tools & Others</h3>
+            <div class="skills-grid">
+              <div class="skill">
+                <i class="fab fa-git-alt"></i>
+                <p>Git</p>
+              </div>
+              <div class="skill">
+                <i class="fab fa-github"></i>
+                <p>GitHub</p>
+              </div>
+              <div class="skill">
+                <i class="fas fa-database"></i>
+                <p>SQL</p>
+              </div>
+              <div class="skill">
+                <i class="fas fa-terminal"></i>
+                <p>Command Line</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Timeline / Experience Section with 3D Animation -->
-    <section class="timeline-section">
-      <div class="timeline-container">
-        <h2>Timeline / Experience</h2>
+    <section class="timeline-section" id="timeline">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">My <span class="highlight">Journey</span></h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Professional experience and education</p>
+        
         <div class="timeline">
-          <div class="timeline-item animate-on-scroll">
-            <div class="timeline-date">2024</div>
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-date">2022</div>
             <div class="timeline-content">
               <h3>Started My Journey</h3>
-              <p>Began exploring web development and design.</p>
+              <p>Began exploring web development and design, building foundational skills in HTML, CSS, and JavaScript.</p>
             </div>
           </div>
-          <div class="timeline-item animate-on-scroll">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+              <h3>Enrolled in Chandigarh University</h3>
+              <p>Started my academic journey in Computer Science with a specialization in Artificial Intelligence and Machine Learning.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
             <div class="timeline-date">2024</div>
             <div class="timeline-content">
               <h3>Launched My First Project</h3>
-              <p>Developed and launched my personal website.</p>
+              <p>Developed and launched my personal portfolio website, showcasing my skills and projects to the world.</p>
             </div>
           </div>
-          <div class="timeline-item animate-on-scroll">
-            <div class="timeline-date">2025</div>
-            <div class="timeline-content">
-              <h3>Worked at X-Vision</h3>
-              <p>Gained professional experience in front-end development.</p>
-            </div>
-          </div>
-          <!-- Add more timeline items as needed -->
+          
         </div>
       </div>
     </section>
 
-    <!-- Contact Form Section with Crazy 3D Animation -->
-    <section class="contact-section animate-on-scroll" id="contact">
-      <div class="contact-container">
-        <h2>Contact Me</h2>
-        <form
-          class="contact-form"
-          action="mailto:chandan153377@gmail.com"
-          method="post"
-          enctype="text/plain"
-        >
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required />
+    <!-- Testimonials Section (New) -->
+    <section class="testimonials-section">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">Client <span class="highlight">Testimonials</span></h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">What people say about my work</p>
+        
+        <div class="testimonials-container">
+          <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-content">
+              <p>"Chandan delivered exceptional work on our healthcare analytics dashboard. His expertise in AI and front-end development created an intuitive interface that greatly improved our workflow."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="niti.jpg" alt="Dr. Priya Sharma" class="testimonial-avatar">
+              <div class="author-info">
+                <h4>Dr. Priya Sharma</h4>
+                <p>Chief Medical Officer, X-Vision Healthcare</p>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required />
+          
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section with Modern Design -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <h2 class="section-title" data-aos="fade-up">Get In <span class="highlight">Touch</span></h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Let's discuss your project or just say hello</p>
+        
+        <div class="contact-wrapper">
+          <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-detail">
+                <h3>Location</h3>
+                <p>India</p>
+              </div>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-detail">
+                <h3>Email</h3>
+                <p>chandan153377@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-detail">
+                <h3>Phone</h3>
+                <p>Available upon request</p>
+              </div>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/chandan-kumar-29014b290/?originalSubdomain=in" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Chandan2909-commits" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/chandan.29_19/profilecard/?igsh=enZzem10cm11bmJh" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="mailto:chandan153377@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
           </div>
-          <div class="form-group">
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              required
-            ></textarea>
+          
+          <div class="contact-form-container" data-aos="fade-left" data-aos-delay="300">
+            <form
+              class="contact-form"
+              action="mailto:chandan153377@gmail.com"
+              method="post"
+              enctype="text/plain"
+              id="contact-form"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your Name" required />
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Your Email" required />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              
+              <button type="submit" class="submit-btn">
+                Send Message <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
           </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-content">
-        <p class="footer-text">
-          Developed by <span class="highlight">Chandan Kumar</span>
-        </p>
-        <a href="#top" class="go-top">Go top</a>
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <span>&lt;/&gt;</span> Chandan
+          </div>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/chandan-kumar-29014b290/?originalSubdomain=in" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Chandan2909-commits" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/chandan.29_19/profilecard/?igsh=enZzem10cm11bmJh" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:chandan153377@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2024 Chandan. All rights reserved.</p>
+          <p>Front-end Developer focused on creating modern web experiences</p>
+        </div>
       </div>
+      
+      <a href="#top" class="go-top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
     </footer>
 
-    <!-- Scroll Animation Script -->
-    <script>
-      // Using Intersection Observer to trigger scroll animations
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("animate");
-            } else {
-              entry.target.classList.remove("animate");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
-        observer.observe(el);
-      });
-    </script>
+    <!-- Resume Modal -->
+    <div class="resume-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>My Resume</h3>
+          <button class="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="resume-options">
+            <div class="resume-preview">
+              <iframe src="Chandan's Resume.pdf" title="Resume Preview"></iframe>
+            </div>
+            <div class="resume-actions">
+              <a href="Chandan's Resume.pdf" class="resume-btn" download>
+                <i class="fas fa-download"></i> Download Resume
+              </a>
+              <a href="Chandan's Resume.pdf" class="resume-btn" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Open in New Tab
+              </a>
+              <div class="resume-share">
+                <p>Share My Resume:</p>
+                <div class="share-buttons">
+                  <a href="#" class="share-btn" title="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="share-btn" title="Share via Email"><i class="fas fa-envelope"></i></a>
+                  <a href="#" class="share-btn" title="Copy Link"><i class="fas fa-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
